@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Trainers List
+Template Name: Liste des formateurs
 */
 
 get_header();
