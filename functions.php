@@ -24,50 +24,51 @@ function add_custom_post_type(){
 
 	register_post_type('training_team',$arguments_training_team);
 
-	$lables_partners= array(
-		'name'=>'Tous les partenaires',
-		'singular_name'=>'Partenaires',
-		'add_new_item'=>'Ajouter un partenaire',
-		'menu_name'=>'Les partenaires'
+	$labels_partners=array(
+		'name'=> 'Tous les partenaires',
+		'singular_name'=>'Partenaire',
+		'add_new_item'=> 'Ajouter un partenaire',
+		'menu_name'=> 'Les partenaires',
 	);
 
 	$arguments_partners=array(
 		'label'=>'Les partenaires',
-		'description'=>'Tous les formateurs de l\'Enah',
-		'labels'=>$lables_partners,
+		'descritpion'=>'Tous les partenaires de l\'Enah',
+		'labels'=>$labels_partners,
 		'capability_type'=>'post',
-		'public'=>true,
+		'public'=> true,
 		'has_archive'=>true,
-		'show_in_rest'=>true,
+		'show_in_rest'=> true,
 		'rewrite'=>array('slug'=>'partenaires'),
 		'supports'=>array('title','editor','thumbnail'),
-		'menu_icon'=>'dashicons-groups'
+		'menu_icon'=>''
 	);
 
 	register_post_type('partners',$arguments_partners);
 
+
 	$labels_cavalerie=array(
-		'name'=>'Tous les chevaux',
+		'name'=> 'Tous les chevaux',
 		'singular_name'=>'Cheval',
-		'add_new_item'=>'Ajouter un cheval',
-		'menu_name'=>'Les chevaux'
+		'add_new_item'=> 'Ajouter un cheval',
+		'menu_name'=> 'La cavalerie',
 	);
 
 	$arguments_cavalerie=array(
-		'label'=>'Les chevaux',
+		'label'=>'La cavalerie',
 		'descritpion'=>'Tous les chevaux de l\'Enah',
 		'labels'=>$labels_cavalerie,
 		'capability_type'=>'post',
-		'public'=>true,
+		'public'=> true,
 		'has_archive'=>true,
-		'show_un_rest'=>true,
+		'show_in_rest'=> true,
 		'rewrite'=>array('slug'=>'cavalerie'),
 		'supports'=>array('title','editor','thumbnail'),
-		'menu_icon'=>'dashicons-editor-customchar',
+		'menu_icon'=>'',
 	);
 
 	register_post_type('cavalerie',$arguments_cavalerie);
-
+	flush_rewrite_rules();
 }
 
 add_action('init','add_custom_post_type');

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Liste des partenaires
+Template Name: Liste des chevaux
 */
 
 get_header();
