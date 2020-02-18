@@ -46,6 +46,28 @@ function add_custom_post_type(){
 
 	register_post_type('partners',$arguments_partners);
 
+	$labels_cavalerie=array(
+		'name'=>'Tous les chevaux',
+		'singular_name'=>'Cheval',
+		'add_new_item'=>'Ajouter un cheval',
+		'menu_name'=>'Les chevaux'
+	);
+
+	$arguments_cavalerie=array(
+		'label'=>'Les chevaux',
+		'descritpion'=>'Tous les chevaux de l\'Enah',
+		'labels'=>$labels_cavalerie,
+		'capability_type'=>'post',
+		'public'=>true,
+		'has_archive'=>true,
+		'show_un_rest'=>true,
+		'rewrite'=>array('slug'=>'partenaires'),
+		'supports'=>array('title','editor','thumbnail'),
+		'menu_icon'=>'dashicons-editor-customchar',
+	);
+
+	register_post_type('cavalerie',$arguments_cavalerie);
+
 }
 
 add_action('init','add_custom_post_type');
