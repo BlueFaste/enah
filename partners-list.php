@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Liste des Partenaires
+Template Name: Liste des partenaires
 */
 
 get_header();
