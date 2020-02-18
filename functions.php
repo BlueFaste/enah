@@ -41,7 +41,7 @@ function add_custom_post_type(){
 		'show_in_rest'=> true,
 		'rewrite'=>array('slug'=>'partenaires'),
 		'supports'=>array('title','editor','thumbnail'),
-		'menu_icon'=>''
+		'menu_icon'=>'dashicons-groups'
 	);
 
 	register_post_type('partners',$arguments_partners);
@@ -64,7 +64,7 @@ function add_custom_post_type(){
 		'show_in_rest'=> true,
 		'rewrite'=>array('slug'=>'cavalerie'),
 		'supports'=>array('title','editor','thumbnail'),
-		'menu_icon'=>'',
+		'menu_icon'=>'dashicons-editor-customchar',
 	);
 
 	register_post_type('cavalerie',$arguments_cavalerie);
