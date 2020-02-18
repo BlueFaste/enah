@@ -61,7 +61,7 @@ function add_custom_post_type(){
 		'public'=>true,
 		'has_archive'=>true,
 		'show_un_rest'=>true,
-		'rewrite'=>array('slug'=>'partenaires'),
+		'rewrite'=>array('slug'=>'cavalerie'),
 		'supports'=>array('title','editor','thumbnail'),
 		'menu_icon'=>'dashicons-editor-customchar',
 	);
