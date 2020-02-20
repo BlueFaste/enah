@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Liste des chevaux
+Template Name: Liste des formateurs
 */
 
 get_header();
